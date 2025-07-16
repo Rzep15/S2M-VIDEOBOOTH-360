@@ -51,6 +51,9 @@
         }
         
         /* Custom Swiper Styles */
+        .swiper-button-next, .swiper-button-prev {
+            color: #d4af37;
+        }
         .swiper-pagination-bullet-active {
             background: #d4af37;
         }
@@ -223,7 +226,7 @@
                 <p class="text-gray-400 text-center max-w-2xl mx-auto mb-16">Kami bangga bisa menjadi bagian dari momen kebahagiaan klien kami.</p>
                 
                 <!-- Swiper -->
-                <div class="swiper-container testimonial-swiper max-w-6xl mx-auto">
+                <div class="swiper-container testimonial-swiper max-w-6xl mx-auto relative">
                     <div class="swiper-wrapper">
                         <!-- Slide 1 -->
                         <div class="swiper-slide bg-[#111111] p-8 rounded-xl">
@@ -261,6 +264,9 @@
                             <p class="text-base text-gray-500 text-center">Panitia Reuni</p>
                         </div>
                     </div>
+                    <!-- Add Navigation -->
+                    <div class="swiper-button-next testimonial-button-next"></div>
+                    <div class="swiper-button-prev testimonial-button-prev"></div>
                 </div>
             </div>
         </section>
@@ -327,8 +333,11 @@
                     delay: 5000,
                     disableOnInteraction: false,
                 },
-                pagination: false, // Menghapus pagination
-                navigation: false, // Menghapus tombol navigasi
+                pagination: false,
+                navigation: {
+                    nextEl: '.testimonial-button-next',
+                    prevEl: '.testimonial-button-prev',
+                },
                 breakpoints: {
                     320: { slidesPerView: 1, spaceBetween: 20 },
                     768: { slidesPerView: 2, spaceBetween: 30 },
