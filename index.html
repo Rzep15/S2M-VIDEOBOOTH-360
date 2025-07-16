@@ -9,54 +9,57 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Poppins -->
+    <!-- Google Fonts: Playfair Display & Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Swiper.js CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     
     <style>
-        /* Menggunakan font Poppins untuk seluruh halaman */
+        /* Menggunakan font premium */
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #111111; /* Latar belakang hitam pekat */
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0d0d0d; /* Latar belakang hitam yang lebih dalam */
         }
-        /* Efek gradasi emas pada teks */
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Efek gradasi emas yang lebih halus */
         .text-gradient-gold {
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
-            background-image: linear-gradient(to right, #FDE047, #BF953F);
+            background-image: linear-gradient(to right, #e7c880, #d4af37);
         }
-        /* Gradasi latar belakang emas */
-        .bg-gradient-gold {
-            background-image: linear-gradient(to right, #FDE047, #DAA520);
+        /* Warna emas yang lebih elegan */
+        .bg-gold {
+            background-color: #d4af37;
         }
         .border-gold {
-            border-color: #DAA520;
+            border-color: #d4af37;
         }
         .text-gold {
-            color: #DAA520;
+            color: #d4af37;
         }
         .hover-bg-gold:hover {
-            background-color: #DAA520;
+            background-color: #c8a02a;
         }
          .shadow-gold {
-            box-shadow: 0 10px 15px -3px rgba(218, 165, 32, 0.2), 0 4px 6px -2px rgba(218, 165, 32, 0.1);
+            box-shadow: 0 10px 25px -5px rgba(212, 175, 55, 0.15), 0 8px 10px -6px rgba(212, 175, 55, 0.1);
         }
         
         /* Custom Swiper Styles */
         .swiper-pagination-bullet-active {
-            background: #DAA520;
+            background: #d4af37;
         }
 
         /* Animasi untuk teks di hero section */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(30px);
+                transform: translateY(40px);
             }
             to {
                 opacity: 1;
@@ -64,42 +67,39 @@
             }
         }
         .fade-in-up {
-            animation: fadeInUp 1s ease-out forwards;
+            animation: fadeInUp 1.2s ease-out forwards;
         }
-        .delay-1 { animation-delay: 0.3s; }
-        .delay-2 { animation-delay: 0.6s; }
+        .delay-1 { animation-delay: 0.4s; }
+        .delay-2 { animation-delay: 0.8s; }
     </style>
 </head>
-<body class="bg-[#111111] text-gray-200">
+<body class="bg-[#0d0d0d] text-gray-300">
 
     <!-- Header / Navbar -->
-    <header class="bg-[#111111]/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
+    <header class="bg-black/50 backdrop-blur-lg fixed top-0 left-0 right-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="flex items-center gap-3">
                 <!-- Logo Pengguna -->
-                <img src="https://i.imgur.com/IJxCjEL.png" alt="Logo S2M" class="h-12">
-                <span class="text-xl sm:text-2xl font-bold text-gradient-gold hidden sm:block">
-                    S2M VIDEOBOOTH
-                </span>
+                <img src="https://i.imgur.com/IJxCjEL.png" alt="Logo S2M" class="h-14">
             </a>
-            <nav class="hidden md:flex space-x-8 items-center">
-                <a href="#paket" class="text-gray-300 hover:text-gold transition-colors">Paket</a>
-                <a href="#testimoni" class="text-gray-300 hover:text-gold transition-colors">Testimoni</a>
-                <a href="#kontak" class="bg-gradient-gold hover:opacity-90 text-black font-semibold px-5 py-2 rounded-full transition-transform transform hover:scale-105">
+            <nav class="hidden md:flex space-x-10 items-center">
+                <a href="#paket" class="text-gray-300 hover:text-gold transition-colors duration-300">Paket</a>
+                <a href="#testimoni" class="text-gray-300 hover:text-gold transition-colors duration-300">Testimoni</a>
+                <a href="#kontak" class="bg-gold hover-bg-gold text-black font-bold px-6 py-2 rounded-full transition-all duration-300 transform hover:scale-105">
                     Hubungi Kami
                 </a>
             </nav>
             <button id="mobile-menu-button" class="md:hidden text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
             </button>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-[#1f1f1f]">
-            <a href="#paket" class="block px-6 py-3 text-gray-300 hover:bg-gray-700">Paket</a>
-            <a href="#testimoni" class="block px-6 py-3 text-gray-300 hover:bg-gray-700">Testimoni</a>
-            <a href="#kontak" class="block px-6 py-3 text-gray-300 hover:bg-gray-700">Hubungi Kami</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-[#1a1a1a]">
+            <a href="#paket" class="block px-6 py-4 text-gray-300 hover:bg-gray-800">Paket</a>
+            <a href="#testimoni" class="block px-6 py-4 text-gray-300 hover:bg-gray-800">Testimoni</a>
+            <a href="#kontak" class="block px-6 py-4 text-gray-300 hover:bg-gray-800">Hubungi Kami</a>
         </div>
     </header>
 
@@ -112,57 +112,57 @@
                 <source src="https://videos.pexels.com/video-files/8571959/8571959-hd.mp4" type="video/mp4">
                 Browser Anda tidak mendukung tag video.
             </video>
-            <div class="absolute inset-0 bg-black/70 z-10"></div>
+            <div class="absolute inset-0 bg-black/75 z-10"></div>
             
             <div class="relative z-20 px-6">
-                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight fade-in-up" style="opacity:0;">
-                    <span class="text-gradient-gold">S2M VIDEOBOOTH 360</span>
+                <h1 class="text-5xl sm:text-6xl md:text-8xl font-bold tracking-tight leading-tight fade-in-up" style="opacity:0;">
+                    <span class="text-gradient-gold">S2M Videobooth 360</span>
                 </h1>
-                <p class="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-gray-300 fade-in-up delay-1" style="opacity:0;">
-                    Pengalaman video 360° yang imersif dan tak terlupakan untuk setiap acara Anda.
+                <p class="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-gray-300 fade-in-up delay-1" style="opacity:0;">
+                    Tingkatkan kemewahan acara Anda dengan pengalaman video 360° yang imersif dan tak terlupakan.
                 </p>
-                <a href="#paket" class="mt-8 inline-block bg-gradient-gold hover:opacity-90 text-black font-bold text-lg px-8 py-4 rounded-full transition-transform transform hover:scale-105 shadow-gold fade-in-up delay-2" style="opacity:0;">
-                    Lihat Paket Harga
+                <a href="#paket" class="mt-10 inline-block bg-gold hover-bg-gold text-black font-bold text-lg px-10 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-gold fade-in-up delay-2" style="opacity:0;">
+                    Jelajahi Paket Kami
                 </a>
             </div>
         </section>
 
         <!-- Paket Harga Section -->
-        <section id="paket" class="py-20 bg-[#111111]">
+        <section id="paket" class="py-24 bg-[#111111]">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-white">Pilihan Paket Untuk Setiap Momen</h2>
+                <h2 class="text-4xl md:text-5xl font-bold mb-16 text-white">Paket Eksklusif Untuk Momen Anda</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
                     <!-- Paket Bronze -->
-                    <div class="bg-[#1f1f1f] p-8 rounded-xl border border-gray-700 flex flex-col">
-                        <h3 class="text-2xl font-bold text-gray-300 mb-2">BRONZE</h3>
-                        <p class="text-lg font-semibold text-gray-500 mb-4">(1 Jam)</p>
-                        <p class="text-4xl font-extrabold mb-4 text-white">Rp 1.000.000</p>
-                        <p class="text-gray-400 text-sm mb-6">Rekomendasi: Arisan, syukuran, prewedding singkat, dan lainnya.</p>
+                    <div class="bg-[#1a1a1a] p-8 rounded-2xl border border-gray-800 flex flex-col transition-transform duration-300 hover:border-gold hover:scale-105">
+                        <h3 class="text-3xl font-bold text-gray-300 mb-2">BRONZE</h3>
+                        <p class="text-lg font-semibold text-gray-500 mb-6">(1 Jam)</p>
+                        <p class="text-5xl font-bold mb-6 text-white">Rp 1jt</p>
+                        <p class="text-gray-400 text-base mb-8">Sempurna untuk acara singkat dan intim seperti arisan atau syukuran.</p>
                         <a href="#" class="paket-button mt-auto w-full bg-gray-700 hover:bg-gray-600 text-white font-semibold py-3 rounded-lg transition-colors" data-package="BRONZE">Pilih Paket</a>
                     </div>
                     <!-- Paket Silver -->
-                    <div class="bg-[#1f1f1f] p-8 rounded-xl border border-gray-700 flex flex-col">
-                        <h3 class="text-2xl font-bold text-gray-300 mb-2">SILVER</h3>
-                        <p class="text-lg font-semibold text-gray-500 mb-4">(3 Jam)</p>
-                        <p class="text-4xl font-extrabold mb-4 text-white">Rp 1.200.000</p>
-                        <p class="text-gray-400 text-sm mb-6">Rekomendasi: Ulang tahun, farewell, gathering, dan lainnya.</p>
+                    <div class="bg-[#1a1a1a] p-8 rounded-2xl border border-gray-800 flex flex-col transition-transform duration-300 hover:border-gold hover:scale-105">
+                        <h3 class="text-3xl font-bold text-gray-300 mb-2">SILVER</h3>
+                        <p class="text-lg font-semibold text-gray-500 mb-6">(3 Jam)</p>
+                        <p class="text-5xl font-bold mb-6 text-white">Rp 1.2jt</p>
+                        <p class="text-gray-400 text-base mb-8">Ideal untuk perayaan ulang tahun, gathering, atau acara perpisahan.</p>
                         <a href="#" class="paket-button mt-auto w-full bg-gray-700 hover:bg-gray-600 text-white font-semibold py-3 rounded-lg transition-colors" data-package="SILVER">Pilih Paket</a>
                     </div>
                     <!-- Paket Gold (Populer) -->
-                    <div class="bg-[#1f1f1f] p-8 rounded-xl border-2 border-gold relative transform md:scale-105 flex flex-col">
-                        <span class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-gradient-gold text-black text-sm font-bold px-4 py-1 rounded-full">PALING POPULER</span>
-                        <h3 class="text-2xl font-bold text-gold mb-2">GOLD</h3>
-                        <p class="text-lg font-semibold text-gray-500 mb-4">(5 Jam)</p>
-                        <p class="text-4xl font-extrabold mb-4 text-white">Rp 1.500.000</p>
-                        <p class="text-gray-400 text-sm mb-6">Rekomendasi: Resepsi nikah, seminar, festival, dan lainnya.</p>
-                        <a href="#" class="paket-button mt-auto w-full bg-gradient-gold hover:opacity-90 text-black font-semibold py-3 rounded-lg transition-colors" data-package="GOLD">Pilih Paket</a>
+                    <div class="bg-[#1a1a1a] p-8 rounded-2xl border-2 border-gold relative transform scale-105 flex flex-col shadow-lg shadow-gold">
+                        <span class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-gold text-black text-sm font-bold px-4 py-1 rounded-full">PALING POPULER</span>
+                        <h3 class="text-3xl font-bold text-gold mb-2">GOLD</h3>
+                        <p class="text-lg font-semibold text-gray-500 mb-6">(5 Jam)</p>
+                        <p class="text-5xl font-bold mb-6 text-white">Rp 1.5jt</p>
+                        <p class="text-gray-400 text-base mb-8">Pilihan terbaik untuk resepsi pernikahan, seminar, dan festival.</p>
+                        <a href="#" class="paket-button mt-auto w-full bg-gold hover-bg-gold text-black font-bold py-3 rounded-lg transition-colors" data-package="GOLD">Pilih Paket</a>
                     </div>
                     <!-- Paket Diamond -->
-                    <div class="bg-[#1f1f1f] p-8 rounded-xl border border-gray-700 flex flex-col">
-                        <h3 class="text-2xl font-bold text-gray-300 mb-2">DIAMOND</h3>
-                        <p class="text-lg font-semibold text-gray-500 mb-4">(7 Jam)</p>
-                        <p class="text-4xl font-extrabold mb-4 text-white">Rp 2.000.000</p>
-                        <p class="text-gray-400 text-sm mb-6">Rekomendasi: Wedding full day, konser, expo, dan lainnya.</p>
+                    <div class="bg-[#1a1a1a] p-8 rounded-2xl border border-gray-800 flex flex-col transition-transform duration-300 hover:border-gold hover:scale-105">
+                        <h3 class="text-3xl font-bold text-gray-300 mb-2">DIAMOND</h3>
+                        <p class="text-lg font-semibold text-gray-500 mb-6">(7 Jam)</p>
+                        <p class="text-5xl font-bold mb-6 text-white">Rp 2jt</p>
+                        <p class="text-gray-400 text-base mb-8">Untuk cakupan acara penuh seperti wedding, konser, atau pameran besar.</p>
                         <a href="#" class="paket-button mt-auto w-full bg-gray-700 hover:bg-gray-600 text-white font-semibold py-3 rounded-lg transition-colors" data-package="DIAMOND">Pilih Paket</a>
                     </div>
                 </div>
@@ -170,51 +170,31 @@
         </section>
 
         <!-- Fasilitas Section -->
-        <section id="fasilitas" class="py-20 bg-[#1f1f1f]">
+        <section id="fasilitas" class="py-24 bg-[#1f1f1f]">
             <div class="container mx-auto px-6">
-                <div class="bg-[#111111] rounded-2xl p-8 md:p-12">
-                     <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-gradient-gold">Fasilitas & Bonus di Setiap Paket</h2>
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="bg-[#111111] rounded-2xl p-8 md:p-16">
+                     <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center text-gradient-gold">Fasilitas & Bonus Premium</h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
                             <!-- Item 1 -->
-                            <div class="bg-[#2a2a2a] p-4 rounded-lg flex items-center gap-4">
-                                <span class="text-gold flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg></span>
-                                <p class="text-gray-300"><b>2 Crew profesional</b> siap membantu</p>
+                            <div class="bg-[#2a2a2a] p-6 rounded-lg text-center">
+                                <span class="text-gold inline-block mb-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg></span>
+                                <p class="text-gray-200 font-semibold">2 Crew Profesional</p>
                             </div>
                              <!-- Item 2 -->
-                            <div class="bg-[#2a2a2a] p-4 rounded-lg flex items-center gap-4">
-                                <span class="text-gold flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg></span>
-                                <p class="text-gray-300">Video kualitas <b>HD (iPhone)</b></p>
+                            <div class="bg-[#2a2a2a] p-6 rounded-lg text-center">
+                                <span class="text-gold inline-block mb-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg></span>
+                                <p class="text-gray-200 font-semibold">Video Kualitas HD</p>
                             </div>
                              <!-- Item 3 -->
-                            <div class="bg-[#2a2a2a] p-4 rounded-lg flex items-center gap-4">
-                                <span class="text-gold flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg></span>
-                                <p class="text-gray-300">Pencahayaan pro <b>Ringlight & RGB</b></p>
+                            <div class="bg-[#2a2a2a] p-6 rounded-lg text-center">
+                                <span class="text-gold inline-block mb-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg></span>
+                                <p class="text-gray-200 font-semibold">Pencahayaan Pro</p>
                             </div>
                              <!-- Item 4 -->
-                            <div class="bg-[#2a2a2a] p-4 rounded-lg flex items-center gap-4">
-                                <span class="text-gold flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5v-4m0 0h-4m4 0l-5-5" /></svg></span>
-                                <p class="text-gray-300"><b>Booth besar (120 cm)</b> muat 6-7 orang</p>
-                            </div>
-                             <!-- Item 5 -->
-                            <div class="bg-[#2a2a2a] p-4 rounded-lg flex items-center gap-4">
-                                <span class="text-gold flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z" /></svg></span>
-                                <p class="text-gray-300"><b>Custom template</b> & musik</p>
-                            </div>
-                             <!-- Item 6 -->
-                            <div class="bg-[#2a2a2a] p-4 rounded-lg flex items-center gap-4">
-                                <span class="text-gold flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" /></svg></span>
-                                <p class="text-gray-300">Karpet merah & <b>tiang antrian</b></p>
-                            </div>
-                             <!-- Item 7 -->
-                            <div class="bg-[#2a2a2a] p-4 rounded-lg flex items-center gap-4">
-                                <span class="text-gold flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18" /></svg></span>
-                                <p class="text-gray-300">Efek video <b>Slow-motion/rewind</b></p>
-                            </div>
-                             <!-- Item 8 -->
-                            <div class="bg-[#2a2a2a] p-4 rounded-lg flex items-center gap-4">
-                                <span class="text-gold flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12s-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" /></svg></span>
-                                <p class="text-gray-300"><b>Sharing instan</b> & mudah</p>
+                            <div class="bg-[#2a2a2a] p-6 rounded-lg text-center">
+                                <span class="text-gold inline-block mb-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12s-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" /></svg></span>
+                                <p class="text-gray-200 font-semibold">Sharing Instan</p>
                             </div>
                         </div>
                         <div class="mt-8 lg:mt-0">
@@ -245,48 +225,48 @@
         </section>
 
         <!-- Testimoni Section -->
-        <section id="testimoni" class="py-20 bg-[#1f1f1f]">
+        <section id="testimoni" class="py-24 bg-[#1f1f1f]">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-white">Apa Kata Mereka?</h2>
-                <p class="text-gray-400 text-center max-w-2xl mx-auto mb-12">Kami bangga bisa menjadi bagian dari momen kebahagiaan klien kami.</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-white">Apa Kata Mereka?</h2>
+                <p class="text-gray-400 text-center max-w-2xl mx-auto mb-16">Kami bangga bisa menjadi bagian dari momen kebahagiaan klien kami.</p>
                 
                 <!-- Swiper -->
                 <div class="swiper-container testimonial-swiper max-w-6xl mx-auto">
                     <div class="swiper-wrapper">
                         <!-- Slide 1 -->
                         <div class="swiper-slide bg-[#111111] p-8 rounded-xl">
-                            <img src="https://placehold.co/100x100/FDE047/000000?text=A" alt="Foto Klien" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-gold">
-                            <p class="text-gray-300 italic text-center">"Seru banget! Acaranya jadi lebih meriah dengan adanya S2M Videobooth. Timnya ramah dan hasilnya keren-keren. Recommended!"</p>
-                            <h4 class="mt-4 font-bold text-lg text-gold text-center">Andini & Budi</h4>
-                            <p class="text-sm text-gray-500 text-center">Pasangan Pernikahan</p>
+                            <img src="https://placehold.co/100x100/FDE047/000000?text=A" alt="Foto Klien" class="w-24 h-24 rounded-full mx-auto mb-6 border-4 border-gold">
+                            <p class="text-gray-300 italic text-center text-lg">"Seru banget! Acaranya jadi lebih meriah dengan adanya S2M Videobooth. Timnya ramah dan hasilnya keren-keren. Recommended!"</p>
+                            <h4 class="mt-6 font-bold text-xl text-gold text-center">Andini & Budi</h4>
+                            <p class="text-base text-gray-500 text-center">Pasangan Pernikahan</p>
                         </div>
                         <!-- Slide 2 -->
                         <div class="swiper-slide bg-[#111111] p-8 rounded-xl">
-                            <img src="https://placehold.co/100x100/FDE047/000000?text=C" alt="Foto Klien" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-gold">
-                            <p class="text-gray-300 italic text-center">"Untuk acara gathering kantor, ini pilihan yang tepat. Semua karyawan happy dan punya kenang-kenangan video yang unik."</p>
-                            <h4 class="mt-4 font-bold text-lg text-gold text-center">Citra Lestari</h4>
-                            <p class="text-sm text-gray-500 text-center">Event Organizer</p>
+                            <img src="https://placehold.co/100x100/FDE047/000000?text=C" alt="Foto Klien" class="w-24 h-24 rounded-full mx-auto mb-6 border-4 border-gold">
+                            <p class="text-gray-300 italic text-center text-lg">"Untuk acara gathering kantor, ini pilihan yang tepat. Semua karyawan happy dan punya kenang-kenangan video yang unik."</p>
+                            <h4 class="mt-6 font-bold text-xl text-gold text-center">Citra Lestari</h4>
+                            <p class="text-base text-gray-500 text-center">Event Organizer</p>
                         </div>
                         <!-- Slide 3 -->
                         <div class="swiper-slide bg-[#111111] p-8 rounded-xl">
-                            <img src="https://placehold.co/100x100/FDE047/000000?text=R" alt="Foto Klien" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-gold">
-                            <p class="text-gray-300 italic text-center">"Anak saya seneng banget di pesta ulang tahunnya ada videobooth 360. Tamu-tamu juga pada antri. Terima kasih S2M!"</p>
-                            <h4 class="mt-4 font-bold text-lg text-gold text-center">Rina Wati</h4>
-                            <p class="text-sm text-gray-500 text-center">Pesta Ulang Tahun</p>
+                            <img src="https://placehold.co/100x100/FDE047/000000?text=R" alt="Foto Klien" class="w-24 h-24 rounded-full mx-auto mb-6 border-4 border-gold">
+                            <p class="text-gray-300 italic text-center text-lg">"Anak saya seneng banget di pesta ulang tahunnya ada videobooth 360. Tamu-tamu juga pada antri. Terima kasih S2M!"</p>
+                            <h4 class="mt-6 font-bold text-xl text-gold text-center">Rina Wati</h4>
+                            <p class="text-base text-gray-500 text-center">Pesta Ulang Tahun</p>
                         </div>
                         <!-- Slide 4 -->
                         <div class="swiper-slide bg-[#111111] p-8 rounded-xl">
-                            <img src="https://placehold.co/100x100/FDE047/000000?text=D" alt="Foto Klien" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-gold">
-                            <p class="text-gray-300 italic text-center">"Profesional dan tepat waktu. Kualitas videonya di atas ekspektasi. Cocok untuk launching produk kami."</p>
-                            <h4 class="mt-4 font-bold text-lg text-gold text-center">David H.</h4>
-                            <p class="text-sm text-gray-500 text-center">Marketing Manager</p>
+                            <img src="https://placehold.co/100x100/FDE047/000000?text=D" alt="Foto Klien" class="w-24 h-24 rounded-full mx-auto mb-6 border-4 border-gold">
+                            <p class="text-gray-300 italic text-center text-lg">"Profesional dan tepat waktu. Kualitas videonya di atas ekspektasi. Cocok untuk launching produk kami."</p>
+                            <h4 class="mt-6 font-bold text-xl text-gold text-center">David H.</h4>
+                            <p class="text-base text-gray-500 text-center">Marketing Manager</p>
                         </div>
                         <!-- Slide 5 -->
                         <div class="swiper-slide bg-[#111111] p-8 rounded-xl">
-                            <img src="https://placehold.co/100x100/FDE047/000000?text=E" alt="Foto Klien" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-gold">
-                            <p class="text-gray-300 italic text-center">"Bikin reuni angkatan jadi makin berkesan. Semua teman-teman suka dan langsung share di sosial media."</p>
-                            <h4 class="mt-4 font-bold text-lg text-gold text-center">Eko Prasetyo</h4>
-                            <p class="text-sm text-gray-500 text-center">Panitia Reuni</p>
+                            <img src="https://placehold.co/100x100/FDE047/000000?text=E" alt="Foto Klien" class="w-24 h-24 rounded-full mx-auto mb-6 border-4 border-gold">
+                            <p class="text-gray-300 italic text-center text-lg">"Bikin reuni angkatan jadi makin berkesan. Semua teman-teman suka dan langsung share di sosial media."</p>
+                            <h4 class="mt-6 font-bold text-xl text-gold text-center">Eko Prasetyo</h4>
+                            <p class="text-base text-gray-500 text-center">Panitia Reuni</p>
                         </div>
                     </div>
                 </div>
@@ -294,9 +274,9 @@
         </section>
 
         <!-- Kontak Section -->
-        <section id="kontak" class="py-20 bg-[#111111]">
+        <section id="kontak" class="py-24 bg-[#111111]">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Abadikan Gaya Terbaikmu dari Semua Sudut</h2>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">Abadikan Gaya Terbaikmu dari Semua Sudut</h2>
                 <p class="text-gray-400 max-w-2xl mx-auto mb-12">Jangan ragu untuk menghubungi kami. Tim kami siap membantu merencanakan kebutuhan videobooth untuk acara spesial Anda.</p>
                 <div class="flex flex-col md:flex-row justify-center items-center gap-6">
                     <a href="https://wa.me/6281211114522" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full flex items-center justify-center gap-3 transition-transform transform hover:scale-105 w-full md:w-auto">
