@@ -47,9 +47,6 @@
         }
         
         /* Custom Swiper Styles */
-        .swiper-button-next, .swiper-button-prev {
-            color: #DAA520;
-        }
         .swiper-pagination-bullet-active {
             background: #DAA520;
         }
@@ -258,9 +255,6 @@
                     </div>
                     <!-- Add Pagination -->
                     <div class="swiper-pagination testimonial-pagination mt-8"></div>
-                    <!-- Add Navigation -->
-                    <div class="swiper-button-next testimonial-button-next"></div>
-                    <div class="swiper-button-prev testimonial-button-prev"></div>
                 </div>
             </div>
         </section>
@@ -341,22 +335,6 @@
                     768: { slidesPerView: 2, spaceBetween: 30 },
                     1024: { slidesPerView: 3, spaceBetween: 40 }
                 }
-            });
-
-            // Inisialisasi Swiper untuk Galeri
-            var gallerySwiper = new Swiper('.gallery-swiper', {
-                loop: true,
-                grabCursor: true,
-                pagination: {
-                    el: '.gallery-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.gallery-button-next',
-                    prevEl: '.gallery-button-prev',
-                },
-                slidesPerView: 1,
-                spaceBetween: 30,
             });
         });
 
