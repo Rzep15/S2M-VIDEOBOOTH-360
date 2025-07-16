@@ -45,23 +45,12 @@
          .shadow-gold {
             box-shadow: 0 10px 15px -3px rgba(218, 165, 32, 0.2), 0 4px 6px -2px rgba(218, 165, 32, 0.1);
         }
-        /* Styling untuk Instagram embed */
-        .instagram-media {
-            margin: 1px auto !important; /* Center the embed */
-            min-width: 280px !important;
-        }
         
         /* Custom Swiper Styles */
         .swiper-button-next, .swiper-button-prev {
             color: #DAA520;
         }
         .swiper-pagination-bullet-active {
-            background: #DAA520;
-        }
-        .gallery-swiper .swiper-button-next, .gallery-swiper .swiper-button-prev {
-             color: #DAA520;
-        }
-        .gallery-swiper .swiper-pagination-bullet-active {
             background: #DAA520;
         }
     </style>
@@ -80,7 +69,6 @@
             </a>
             <nav class="hidden md:flex space-x-8 items-center">
                 <a href="#paket" class="text-gray-300 hover:text-gold transition-colors">Paket</a>
-                <a href="#galeri" class="text-gray-300 hover:text-gold transition-colors">Galeri</a>
                 <a href="#testimoni" class="text-gray-300 hover:text-gold transition-colors">Testimoni</a>
                 <a href="#kontak" class="bg-gradient-gold hover:opacity-90 text-black font-semibold px-5 py-2 rounded-full transition-transform transform hover:scale-105">
                     Hubungi Kami
@@ -95,7 +83,6 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-[#1f1f1f]">
             <a href="#paket" class="block px-6 py-3 text-gray-300 hover:bg-gray-700">Paket</a>
-            <a href="#galeri" class="block px-6 py-3 text-gray-300 hover:bg-gray-700">Galeri</a>
             <a href="#testimoni" class="block px-6 py-3 text-gray-300 hover:bg-gray-700">Testimoni</a>
             <a href="#kontak" class="block px-6 py-3 text-gray-300 hover:bg-gray-700">Hubungi Kami</a>
         </div>
@@ -220,39 +207,6 @@
                             <li class="flex items-start"><span class="text-gold mr-3 mt-1">✔</span> <span><b>Properti seru</b> (buku nikah, kacamata, money gun, dll)</span></li>
                         </ul>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Galeri Section -->
-        <section id="galeri" class="py-20 bg-[#111111]">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-white">Galeri Momen</h2>
-                <p class="text-center text-gray-400 max-w-2xl mx-auto mb-12">Lihat beberapa aksi terbaik dari acara-acara yang telah kami meriahkan.</p>
-                
-                <!-- Swiper untuk Galeri -->
-                <div class="swiper-container gallery-swiper max-w-4xl mx-auto">
-                    <div class="swiper-wrapper">
-                        <!-- Slide Video 1 -->
-                        <div class="swiper-slide">
-                            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DKHWs1Xzhz_/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14"></blockquote>
-                        </div>
-                        <!-- Slide Video 2 -->
-                        <div class="swiper-slide">
-                            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DL1vby4TQtX/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14"></blockquote>
-                        </div>
-                    </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination gallery-pagination mt-8"></div>
-                    <!-- Add Navigation -->
-                    <div class="swiper-button-next gallery-button-next"></div>
-                    <div class="swiper-button-prev gallery-button-prev"></div>
-                </div>
-
-                <div class="text-center mt-12">
-                     <a href="https://instagram.com/s2m_videobooth360" target="_blank" class="bg-gradient-gold hover:opacity-90 text-black font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 w-full md:w-auto">
-                        Lihat Lebih Banyak di Instagram
-                    </a>
                 </div>
             </div>
         </section>
