@@ -253,8 +253,6 @@
                             <p class="text-sm text-gray-500 text-center">Panitia Reuni</p>
                         </div>
                     </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination testimonial-pagination mt-8"></div>
                 </div>
             </div>
         </section>
@@ -322,10 +320,7 @@
                     delay: 5000,
                     disableOnInteraction: false,
                 },
-                pagination: {
-                    el: '.testimonial-pagination',
-                    clickable: true,
-                },
+                pagination: false, // Menghapus pagination
                 navigation: false, // Menghapus tombol navigasi
                 breakpoints: {
                     320: { slidesPerView: 1, spaceBetween: 20 },
