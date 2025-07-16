@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S2M VIDEOBOOTH 360 - Abadikan Momen Spesial Anda</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Menggunakan font Poppins untuk seluruh halaman */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #111111; /* Latar belakang hitam pekat */
+        }
+        /* Efek gradasi emas pada teks */
+        .text-gradient-gold {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(to right, #FDE047, #BF953F);
+        }
+        /* Gradasi latar belakang emas */
+        .bg-gradient-gold {
+            background-image: linear-gradient(to right, #FDE047, #DAA520);
+        }
+        .border-gold {
+            border-color: #DAA520;
+        }
+        .text-gold {
+            color: #DAA520;
+        }
+        .hover-bg-gold:hover {
+            background-color: #DAA520;
+        }
+         .shadow-gold {
+            box-shadow: 0 10px 15px -3px rgba(218, 165, 32, 0.2), 0 4px 6px -2px rgba(218, 165, 32, 0.1);
+        }
+        /* Styling untuk Instagram embed */
+        .instagram-media {
+            margin: 1px auto !important; /* Center the embed */
+        }
+    </style>
+</head>
+<body class="bg-[#111111] text-gray-200">
+
+    <!-- Header / Navbar -->
+    <header class="bg-[#111111]/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3">
+                <!-- Logo Pengguna -->
+                <img src="https://i.ibb.co/68yvF5x/S2M.png" alt="Logo S2M" class="h-12">
+                <span class="text-2xl font-bold text-gradient-gold hidden sm:block">
+                    S2M VIDEOBOOTH
+                </span>
+            </a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#layanan" class="text-gray-300 hover:text-gold transition-colors">Layanan</a>
+                <a href="#paket" class="text-gray-300 hover:text-gold transition-colors">Paket</a>
+                <a href="#galeri" class="text-gray-300 hover:text-gold transition-colors">Galeri</a>
+                <a href="#kontak" class="bg-gradient-gold hover:opacity-90 text-black font-semibold px-5 py-2 rounded-full transition-transform transform hover:scale-105">
+                    Hubungi Kami
+                </a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#1f1f1f]">
+            <a href="#layanan" class="block px-6 py-3 text-gray-300 hover:bg-gray-700">Layanan</a>
+            <a href="#paket" class="block px-6 py-3 text-gray-300 hover:bg-gray-700">Paket</a>
+            <a href="#galeri" class="block px-6 py-3 text-gray-300 hover:bg-gray-700">Galeri</a>
+            <a href="#kontak" class="block px-6 py-3 text-gray-300 hover:bg-gray-700">Hubungi Kami</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section id="beranda" class="relative h-screen flex items-center justify-center text-center">
+            <div class="absolute inset-0 bg-black/70 z-10"></div>
+            <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=2070&auto=format&fit=crop" 
+                 alt="Videobooth 360 di sebuah acara mewah" 
+                 class="absolute inset-0 w-full h-full object-cover opacity-30">
+            
+            <div class="relative z-20 px-6">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight">
+                    <span class="text-gradient-gold">S2M VIDEOBOOTH 360</span>
+                </h1>
+                <p class="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-gray-300">
+                    Pengalaman video 360° yang imersif dan tak terlupakan untuk setiap acara Anda.
+                </p>
+                <a href="#paket" class="mt-8 inline-block bg-gradient-gold hover:opacity-90 text-black font-bold text-lg px-8 py-4 rounded-full transition-transform transform hover:scale-105 shadow-gold">
+                    Lihat Paket Harga
+                </a>
+            </div>
+        </section>
+
+        <!-- Layanan / Keunggulan Section -->
+        <section id="layanan" class="py-20 bg-[#111111]">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Layanan Terbaik Untuk Anda</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto mb-12">Kami memberikan fasilitas lengkap untuk memastikan acara Anda menjadi momen yang paling berkesan.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-[#1f1f1f] p-8 rounded-xl transform hover:-translate-y-2 transition-transform">
+                        <div class="text-gold mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" viewBox="0 0 20 20" fill="currentColor"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" /></svg></div>
+                        <h3 class="text-xl font-semibold mb-2 text-white">Kapasitas Besar</h3>
+                        <p class="text-gray-400">Booth besar (120 cm) dapat menampung hingga 6-7 orang sekaligus.</p>
+                    </div>
+                    <div class="bg-[#1f1f1f] p-8 rounded-xl transform hover:-translate-y-2 transition-transform">
+                        <div class="text-gold mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd" /></svg></div>
+                        <h3 class="text-xl font-semibold mb-2 text-white">Template & Musik Custom</h3>
+                        <p class="text-gray-400">Sesuaikan video dengan tema acara Anda, lengkap dengan musik pilihan.</p>
+                    </div>
+                    <div class="bg-[#1f1f1f] p-8 rounded-xl transform hover:-translate-y-2 transition-transform">
+                        <div class="text-gold mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" viewBox="0 0 20 20" fill="currentColor"><path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" /></svg></div>
+                        <h3 class="text-xl font-semibold mb-2 text-white">Sharing Instan</h3>
+                        <p class="text-gray-400">Bagikan video langsung via AirDrop, WA, Barcode, atau Google Drive.</p>
+                    </div>
+                    <div class="bg-[#1f1f1f] p-8 rounded-xl transform hover:-translate-y-2 transition-transform">
+                        <div class="text-gold mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg></div>
+                        <h3 class="text-xl font-semibold mb-2 text-white">Properti Seru</h3>
+                        <p class="text-gray-400">Banyak properti lucu seperti money gun, kacamata, dan bubble gun.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Paket Harga Section -->
+        <section id="paket" class="py-20 bg-[#1f1f1f]">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-white">Pilihan Paket Untuk Setiap Momen</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                    <!-- Paket Bronze -->
+                    <div class="bg-[#111111] p-8 rounded-xl border border-gray-700 flex flex-col">
+                        <h3 class="text-2xl font-bold text-gray-300 mb-2">BRONZE</h3>
+                        <p class="text-lg font-semibold text-gray-500 mb-4">(1 Jam)</p>
+                        <p class="text-4xl font-extrabold mb-4 text-white">Rp 1.000.000</p>
+                        <p class="text-gray-400 text-sm mb-6 h-20">Rekomendasi: Arisan, syukuran, prewedding singkat, dan lainnya.</p>
+                        <a href="#kontak" class="mt-auto w-full bg-gray-700 hover:bg-gray-600 text-white font-semibold py-3 rounded-lg transition-colors">Pilih Paket</a>
+                    </div>
+                    <!-- Paket Silver -->
+                    <div class="bg-[#111111] p-8 rounded-xl border border-gray-700 flex flex-col">
+                        <h3 class="text-2xl font-bold text-gray-300 mb-2">SILVER</h3>
+                        <p class="text-lg font-semibold text-gray-500 mb-4">(3 Jam)</p>
+                        <p class="text-4xl font-extrabold mb-4 text-white">Rp 1.200.000</p>
+                        <p class="text-gray-400 text-sm mb-6 h-20">Rekomendasi: Ulang tahun, farewell, gathering, dan lainnya.</p>
+                        <a href="#kontak" class="mt-auto w-full bg-gray-700 hover:bg-gray-600 text-white font-semibold py-3 rounded-lg transition-colors">Pilih Paket</a>
+                    </div>
+                    <!-- Paket Gold (Populer) -->
+                    <div class="bg-[#111111] p-8 rounded-xl border-2 border-gold relative transform md:scale-105 flex flex-col">
+                        <span class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-gradient-gold text-black text-sm font-bold px-4 py-1 rounded-full">PALING POPULER</span>
+                        <h3 class="text-2xl font-bold text-gold mb-2">GOLD</h3>
+                        <p class="text-lg font-semibold text-gray-500 mb-4">(5 Jam)</p>
+                        <p class="text-4xl font-extrabold mb-4 text-white">Rp 1.500.000</p>
+                        <p class="text-gray-400 text-sm mb-6 h-20">Rekomendasi: Resepsi nikah, seminar, festival, dan lainnya.</p>
+                        <a href="#kontak" class="mt-auto w-full bg-gradient-gold hover:opacity-90 text-black font-semibold py-3 rounded-lg transition-colors">Pilih Paket</a>
+                    </div>
+                    <!-- Paket Diamond -->
+                    <div class="bg-[#111111] p-8 rounded-xl border border-gray-700 flex flex-col">
+                        <h3 class="text-2xl font-bold text-gray-300 mb-2">DIAMOND</h3>
+                        <p class="text-lg font-semibold text-gray-500 mb-4">(8 Jam)</p>
+                        <p class="text-4xl font-extrabold mb-4 text-white">Rp 2.000.000</p>
+                        <p class="text-gray-400 text-sm mb-6 h-20">Rekomendasi: Wedding full day, konser, expo, dan lainnya.</p>
+                        <a href="#kontak" class="mt-auto w-full bg-gray-700 hover:bg-gray-600 text-white font-semibold py-3 rounded-lg transition-colors">Pilih Paket</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fasilitas Section -->
+        <section id="fasilitas" class="py-20 bg-[#111111]">
+            <div class="container mx-auto px-6">
+                <div class="bg-[#1f1f1f] rounded-2xl p-8 md:p-12 lg:flex lg:items-center lg:gap-8 lg:justify-between">
+                    <div class="lg:w-1/2">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gradient-gold">Semua Paket Termasuk</h2>
+                        <div class="space-y-4">
+                            <!-- Kartu Bonus Spesial -->
+                            <div class="bg-gradient-to-br from-yellow-300 to-amber-500 text-black p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                                <div class="flex items-center gap-4">
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                          <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xl font-bold">BONUS SPESIAL!</h4>
+                                        <p class="text-sm opacity-90">
+                                            Pilih salah satu: <br>
+                                            1. Undangan Digital Online <br>
+                                            2. Papan Ucapan Akrilik
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Kartu Add-On -->
+                            <div class="bg-gray-700 text-white p-6 rounded-xl transform hover:scale-105 transition-transform duration-300">
+                                <div class="flex items-center gap-4">
+                                    <div>
+                                       <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                          <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xl font-bold">Add-On Overtime</h4>
+                                        <p class="text-sm opacity-90">+1 Jam hanya Rp 200.000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 lg:mt-0 lg:w-1/2 lg:pl-12">
+                        <h3 class="text-2xl font-semibold mb-4 text-white">✅ Fasilitas Lengkap:</h3>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-start"><span class="text-gold mr-3 mt-1">✔</span> <span><b>2 Crew profesional</b> siap membantu</span></li>
+                            <li class="flex items-start"><span class="text-gold mr-3 mt-1">✔</span> <span>Video kualitas <b>HD (iPhone)</b></span></li>
+                            <li class="flex items-start"><span class="text-gold mr-3 mt-1">✔</span> <span>Pencahayaan pro dengan <b>Ringlight & RGB LED</b></span></li>
+                            <li class="flex items-start"><span class="text-gold mr-3 mt-1">✔</span> <span><b>Booth besar (120 cm)</b> muat 6-7 orang</span></li>
+                            <li class="flex items-start"><span class="text-gold mr-3 mt-1">✔</span> <span><b>Custom template & musik</b> sesuai tema</span></li>
+                            <li class="flex items-start"><span class="text-gold mr-3 mt-1">✔</span> <span>Lengkap dengan <b>karpet merah & tiang antrian</b></span></li>
+                            <li class="flex items-start"><span class="text-gold mr-3 mt-1">✔</span> <span>Efek video <b>Slow-motion/rewind</b></span></li>
+                            <li class="flex items-start"><span class="text-gold mr-3 mt-1">✔</span> <span><b>Sharing instan</b> (AirDrop, WA, Barcode, GDrive)</span></li>
+                            <li class="flex items-start"><span class="text-gold mr-3 mt-1">✔</span> <span><b>Properti seru</b> (buku nikah, kacamata, money gun, dll)</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeri Section -->
+        <section id="galeri" class="py-20 bg-[#1f1f1f]">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-white">Galeri Momen</h2>
+                <p class="text-center text-gray-400 max-w-2xl mx-auto mb-12">Lihat beberapa aksi terbaik dari acara-acara yang telah kami meriahkan.</p>
+                
+                <!-- Grid untuk Video Embed -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    
+                    <!-- Video 1 -->
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DKHWs1Xzhz_/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14"></blockquote>
+
+                    <!-- Video 2 -->
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DL1vby4TQtX/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14"></blockquote>
+
+                    <!-- Video 3 -->
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DIvyxDnykYQ/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14"></blockquote>
+
+                    <!-- Video 4 -->
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DL1keJkzjLB/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14"></blockquote>
+
+                </div>
+                <div class="text-center mt-12">
+                     <a href="https://instagram.com/s2m_videobooth360" target="_blank" class="bg-gradient-gold hover:opacity-90 text-black font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 w-full md:w-auto">
+                        Lihat Lebih Banyak di Instagram
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontak Section -->
+        <section id="kontak" class="py-20 bg-[#111111]">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Siap Membuat Acara Anda Viral?</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto mb-12">Jangan ragu untuk menghubungi kami. Tim kami siap membantu merencanakan kebutuhan videobooth untuk acara spesial Anda.</p>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+                    <a href="https://wa.me/6281211114522" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full flex items-center justify-center gap-3 transition-transform transform hover:scale-105 w-full md:w-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943s-.182-.15-.38-.25z"/></svg>
+                        Chat di WhatsApp
+                    </a>
+                    <a href="https://instagram.com/s2m_videobooth360" target="_blank" class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-4 px-8 rounded-full flex items-center justify-center gap-3 transition-transform transform hover:scale-105 w-full md:w-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417 1.417A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.703.01 5.556 0 5.829 0 8s.01 2.444.048 3.297c.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.445.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.556 15.99 5.829 16 8 16s2.444-.01 3.297-.048c.852-.04 1.433-.174 1.942-.372.526-.205.972-.478 1.417-.923.445-.445.718-.891.923-1.417.198-.509.333-1.09.372-1.942C15.99 10.444 16 10.171 16 8s-.01-2.444-.048-3.297c-.04-.852-.174-1.433-.372-1.942a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.09-.333-1.942-.372C10.444.01 10.171 0 8 0zm0 1.442a6.56 6.56 0 1 1 0 13.12A6.56 6.56 0 0 1 8 1.442zM8 4.202a3.79 3.79 0 1 0 0 7.58 3.79 3.79 0 0 0 0-7.58zm0 1.443a2.35 2.35 0 1 1 0 4.7 2.35 2.35 0 0 1 0-4.7z"/></svg>
+                        Lihat Instagram
+                    </a>
+                </div>
+                <p class="text-xs text-gray-500 mt-8">📍 S&K berlaku</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#111111] border-t border-gray-800">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+            <p>&copy; 2024 S2M VIDEOBOOTH. Semua Hak Cipta Dilindungi.</p>
+            <p class="text-sm mt-2">Dibuat dengan ❤️ untuk momen tak terlupakan.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript untuk toggle menu mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    <script async src="//www.instagram.com/embed.js"></script>
+
+</body>
+</html>
