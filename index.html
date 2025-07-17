@@ -58,28 +58,17 @@
             background: #d4af37;
         }
 
-        /* Animasi untuk teks di hero section */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        /* Styling untuk Header saat di-scroll */
+        header.scrolled {
+            background-color: rgba(13, 13, 13, 0.85); /* bg-[#0d0d0d]/85 */
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
         }
-        .fade-in-up {
-            animation: fadeInUp 1.2s ease-out forwards;
-        }
-        .delay-1 { animation-delay: 0.4s; }
-        .delay-2 { animation-delay: 0.8s; }
     </style>
 </head>
 <body class="bg-[#0d0d0d] text-gray-300">
 
     <!-- Header / Navbar -->
-    <header class="bg-black/50 backdrop-blur-lg fixed top-0 left-0 right-0 z-50">
+    <header id="main-header" class="bg-black/50 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 transition-all duration-300">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="flex items-center gap-3">
                 <!-- Logo Pengguna -->
@@ -112,21 +101,25 @@
         <section id="beranda" class="relative h-screen flex items-center justify-center text-center overflow-hidden">
             <!-- Video Background -->
             <video autoplay loop muted playsinline class="absolute z-0 w-auto min-w-full min-h-full max-w-none">
-                <source src="https://videos.pexels.com/video-files/5495823/5495823-hd.mp4" type="video/mp4">
+                <source src="https://videos.pexels.com/video-files/8044823/8044823-hd.mp4" type="video/mp4">
                 Browser Anda tidak mendukung tag video.
             </video>
-            <div class="absolute inset-0 bg-black/75 z-10"></div>
+            <div class="absolute inset-0 bg-black/60 z-10"></div>
             
             <div class="relative z-20 px-6">
-                <h1 class="text-5xl sm:text-6xl md:text-8xl font-bold tracking-tight leading-tight fade-in-up" style="opacity:0;">
+                <h1 class="text-5xl sm:text-6xl md:text-8xl font-bold tracking-tight leading-tight">
                     <span class="text-gradient-gold">S2M Videobooth 360</span>
                 </h1>
-                <p class="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-gray-300 fade-in-up delay-1" style="opacity:0;">
+                <p class="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-gray-300">
                     Tingkatkan kemewahan acara Anda dengan pengalaman video 360° yang imersif dan tak terlupakan.
                 </p>
-                <a href="#paket" class="mt-10 inline-block bg-gold hover-bg-gold text-black font-bold text-lg px-10 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-gold fade-in-up delay-2" style="opacity:0;">
+                <a href="#paket" class="mt-10 inline-block bg-gold hover-bg-gold text-black font-bold text-lg px-10 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-gold">
                     Jelajahi Paket Kami
                 </a>
+            </div>
+             <!-- Scroll Down Arrow -->
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20">
+                <svg class="w-8 h-8 text-gray-400 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
             </div>
         </section>
 
@@ -340,7 +333,6 @@
                     delay: 5000,
                     disableOnInteraction: false,
                 },
-                pagination: false,
                 navigation: {
                     nextEl: '.testimonial-button-next',
                     prevEl: '.testimonial-button-prev',
